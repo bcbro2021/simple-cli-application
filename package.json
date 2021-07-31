@@ -1,0 +1,11 @@
+{
+  "name": "bcmoduletest",
+  "version": "1.0.0",
+  "description": "This is a test module",
+  "main": "module.js",
+  "scripts": {
+    "test": "node module.js"
+  },
+  "author": "brokencreeper",
+  "license": "ISC"
+}
