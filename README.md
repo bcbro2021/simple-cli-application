@@ -5,9 +5,9 @@ This is a small cli(Command Line Interface) application made with Javascript and
 # UPDATES
 
 # 1.1
--exit function
--calculator that can do + , - , * and /
--date, time, year display
+-exit function.
+-calculator that can do + , - , * and /.
+-date, time, year display.
 
 # 1.0
 simple exit function and calculator that only does addition
