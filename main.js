@@ -3,7 +3,7 @@ const rl = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
+const fs = require("fs");
 //global variables
 let prefix = "Bc: "
 let date = new Date();
@@ -13,11 +13,11 @@ console.log("-----BCSCRIPT-----")
 var recursiveAsyncReadLine = function () {
 	//main input event
 	rl.question(prefix,function(input){
-		//exit
+		//1.exit
 		if(input == "exit") {
 			return rl.close()
 		}
-		//calculator(addition only)
+		//2.calculator(addition only)
 		if(input == "calc") {
 			let operator = "+"
 			let num1 = 0;
@@ -58,9 +58,19 @@ var recursiveAsyncReadLine = function () {
 				});
 			});
 		}
-		//date,time
+		//3.date,time
 		if(input == "time"){
 			console.log(date);
+		}
+		//4.delete file
+		if(input == "delete"){
+			rl.question("choose file name:",function (input) {
+				fs.unlink(input, function (err) {
+					if (err) throw err;
+					console.log(input +' deleted!');
+					recursiveAsyncReadLine();
+				});
+			})
 		}
 		//end
 		recursiveAsyncReadLine();
