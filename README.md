@@ -6,7 +6,7 @@ This is a small cli(Command Line Interface) application made with Javascript and
 
 # 1.1
 -exit function
--calculator that can do +,-,* and /
+-calculator that can do + , - , * and /
 -date, time, year display
 
 # 1.0
